@@ -1,11 +1,18 @@
 <?php
-$app->get('/', function() {
 
-    require '../src/model.php';
-    $sejours = getSejours();
+    $app->get('/', function() use ($app) {
+        require '../src/Connection.php';
+        require '../src/stpaul/Sejour.php';
+        require '../src/stpaul/SejourDAO.php';
 
-    ob_start();                 // start buffering HTML output
-    require '../views/vue.php';
-    $view = ob_get_clean();      // assign HTML output to $view
-    return $view;
-});
+        $connection = new Connection();
+
+        //$sejours = $model->getAllSejours();
+
+        $sejourDAO = new SejourDAO($connection->getBdd());
+        $sejours = $sejourDAO->findAll();
+
+
+        return $app['twig']->render('index.html.twig', array('sejours' => $sejours));
+
+    });

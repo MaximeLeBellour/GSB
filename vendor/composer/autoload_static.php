@@ -4,19 +4,27 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInited1edbd868ef16b96e78f191645decaf
+class ComposerStaticInitefa6647047e49bf0e4380bd003de5c36
 {
     public static $files = array (
-        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '5255c38a0faeba867671b61dfda6d864' => __DIR__ . '/..' . '/paragonie/random_compat/lib/random.php',
         '023d27dca8066ef29e6739335ea73bad' => __DIR__ . '/..' . '/symfony/polyfill-php70/bootstrap.php',
+        '667aeda72477189d0494fecd327c3641' => __DIR__ . '/..' . '/symfony/var-dumper/Resources/functions/dump.php',
+        '0e423a14e27410a071e5d815d3ffc856' => __DIR__ . '/..' . '/larapack/dd/src/helper.php',
     );
 
     public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Twig\\' => 5,
+        ),
         'S' => 
         array (
             'Symfony\\Polyfill\\Php70\\' => 23,
             'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Component\\VarDumper\\' => 28,
+            'Symfony\\Component\\Translation\\' => 30,
             'Symfony\\Component\\Routing\\' => 26,
             'Symfony\\Component\\HttpKernel\\' => 29,
             'Symfony\\Component\\HttpFoundation\\' => 33,
@@ -34,9 +42,17 @@ class ComposerStaticInited1edbd868ef16b96e78f191645decaf
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\' => 16,
         ),
+        'C' => 
+        array (
+            'Carbon\\' => 7,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Twig\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/twig/twig/src',
+        ),
         'Symfony\\Polyfill\\Php70\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-php70',
@@ -44,6 +60,14 @@ class ComposerStaticInited1edbd868ef16b96e78f191645decaf
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Component\\VarDumper\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/var-dumper',
+        ),
+        'Symfony\\Component\\Translation\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/symfony/translation',
         ),
         'Symfony\\Component\\Routing\\' => 
         array (
@@ -85,9 +109,27 @@ class ComposerStaticInited1edbd868ef16b96e78f191645decaf
         array (
             0 => __DIR__ . '/..' . '/doctrine/common/lib/Doctrine/Common',
         ),
+        'Carbon\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nesbot/carbon/src/Carbon',
+        ),
     );
 
     public static $prefixesPsr0 = array (
+        's' => 
+        array (
+            'stpaul' => 
+            array (
+                0 => __DIR__ . '/../..' . '/src',
+            ),
+        ),
+        'T' => 
+        array (
+            'Twig_' => 
+            array (
+                0 => __DIR__ . '/..' . '/twig/twig/lib',
+            ),
+        ),
         'P' => 
         array (
             'Pimple' => 
@@ -133,10 +175,10 @@ class ComposerStaticInited1edbd868ef16b96e78f191645decaf
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInited1edbd868ef16b96e78f191645decaf::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInited1edbd868ef16b96e78f191645decaf::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInited1edbd868ef16b96e78f191645decaf::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInited1edbd868ef16b96e78f191645decaf::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitefa6647047e49bf0e4380bd003de5c36::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitefa6647047e49bf0e4380bd003de5c36::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitefa6647047e49bf0e4380bd003de5c36::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInitefa6647047e49bf0e4380bd003de5c36::$classMap;
 
         }, null, ClassLoader::class);
     }

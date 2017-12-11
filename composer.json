@@ -2,15 +2,21 @@
   "name": "vendor_name/package_name",
   "description": "description_text",
   "minimum-stability": "stable",
-  "license": "proprietary",
+  "license": "Open Source",
   "authors": [
     {
-      "name": "author's name",
-      "email": "email@example.com"
+      "name": "Flavien JOURDREN",
+      "email": "flavien.jourdren@gmail.com"
     }
   ],
   "require": {
     "silex/silex": "2.2.x-dev",
-    "doctrine/dbal": "2.5.x-dev"
+    "doctrine/dbal": "2.4.x-dev",
+    "twig/twig": "v1.35.0",
+    "nesbot/carbon": "1.22.1",
+    "larapack/dd": "1.1"
+  },
+  "autoload": {
+    "psr-0": {"stpaul": "src/"}
   }
 }
