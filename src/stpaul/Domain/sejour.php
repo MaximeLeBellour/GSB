@@ -2,7 +2,6 @@
 
 namespace stpaul\Domain;
 
-class Sejour
-{
-
+class Sejour {
+private $_libelle;
 }
