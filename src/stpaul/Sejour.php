@@ -1,4 +1,5 @@
 <?php
+namespace stpaul;
 
 use Carbon\Carbon;
 
@@ -73,6 +74,15 @@ class Sejour {
         $this->dtefin = $dtefin;
     }
 
+    public function getSejDteFin()
+    {
+        return $this->sejDteDeb + $this->sejDuree;
+    }
+
+    public function getSejDteFormatFR($pDte)
+    {
+        return substr($pDte, -2).substr($pDte, -5, 2).substr($pDte, 4);
+    }
 }
 
 ?>

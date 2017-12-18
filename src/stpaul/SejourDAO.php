@@ -1,5 +1,7 @@
 <?php
 
+namespace stpaul;
+
 class SejourDAO {
     private $bdd;
 

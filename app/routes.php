@@ -1,9 +1,9 @@
 <?php
 
+use stpaul\SejourDAO;
+
     $app->get('/', function() use ($app) {
         require '../src/Connection.php';
-        require '../src/stpaul/Sejour.php';
-        require '../src/stpaul/SejourDAO.php';
 
         $connection = new Connection();
 

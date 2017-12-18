@@ -62,7 +62,7 @@
 </main>
 
 <footer class="footer">
-		Copyright &copy; 2016 Saint paul du terray
+		Copyright &copy; 2017 Saint paul du terray
 </footer>
 
 
